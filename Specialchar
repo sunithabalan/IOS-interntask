@@ -1,0 +1,27 @@
+import Foundation
+
+var input = "ab#45*9/2/7890a///////:d+90-"
+var number = [String]()
+var alphabets  = [String]()
+var specialChar  = [String]()
+for each in input
+{
+    if each.isNumber
+    {
+        var num = " \(each)"
+        number.append(num)
+    }
+    else if each.isLetter
+    {
+        var letter  = " \(each)"
+        alphabets.append(letter)
+    }
+    else
+    {
+       print(each)
+        let countofcharaters = input.lazy.filter { $0 == each }.count
+        print(countofcharaters)
+    }
+}
+print(number)
+print(alphabets)
